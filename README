@@ -3,12 +3,11 @@
 Name : Viswamithra Vallabhaneni.   
 Student Id: 015570516.
 
+## Steps to run the Assignment-1
+
 1. Start your VMWare workstation.
 2. Setup the VM settings and choose the cpu memory and number of processors, I have choosed 8GB and 4 processing units.
 3. Enable the Nested hypervisior feature for the VM.
-4. 
-
-
 
 
 
