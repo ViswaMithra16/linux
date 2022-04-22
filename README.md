@@ -47,6 +47,9 @@ Student Id: 015570516.
 
 # Assignment-2
 
+Viswamithra - %eax=0x4FFFFFFE
+Sravani - %eax=0x4FFFFFFF
+
 ###### Let’s start with the first instruction 0x4FFFFFFF. Here we need to know the total exits of all types when the exit equals to 0x4FFFFFFF instruction. We can do this by incrementing it by 1 whenever the instructions equal the value, using an if condition. 
 
 The assignment files are committed to path linux/cmpe283/Assignment -2/
