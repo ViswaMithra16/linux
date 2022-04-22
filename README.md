@@ -47,6 +47,8 @@ Student Id: 015570516.
 
 # Assignment-2
 
+###### Let’s start with the first instruction 0x4FFFFFFF. Here we need to know the total exits of all types when the exit equals to 0x4FFFFFFF instruction. We can do this by incrementing it by 1 whenever the instructions equal the value, using an if condition. 
+
 The assignment files are committed to path linux/cmpe283/Assignment -2/
 1. Worked on the CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE
 2. To get the total number of exits modified the code in cpuid.c file.
