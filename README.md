@@ -71,6 +71,15 @@ Below are the commands executed:
 9. modprobe kvm
 10. modprobe kvm_intel
 
+Below are some reference images for Assignment 2 and 3:
+
+![Assigment-2 new](https://user-images.githubusercontent.com/88958925/166080390-4ec4ae7a-25c5-47fd-85fa-e091aec724b0.png)
+
+Installing Nested VM.
+
+![Assignment-3_2](https://user-images.githubusercontent.com/88958925/166080474-dda0d5fd-40bb-4462-addf-37c5a9abf821.png)
+
+
 Create a Inner VM inside a VM using the below commands:
 1. sudo apt update
 2. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
