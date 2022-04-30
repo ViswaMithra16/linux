@@ -80,9 +80,6 @@ Installing Nested VM.
 ![Assignment-3_2](https://user-images.githubusercontent.com/88958925/166080474-dda0d5fd-40bb-4462-addf-37c5a9abf821.png)
 
 
-![fe_2](https://user-images.githubusercontent.com/88958925/166086757-1f307b37-50a7-4bd9-bc4d-91ca17a21a37.PNG)
-
-
 Create a Inner VM inside a VM using the below commands:
 1. sudo apt update
 2. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
@@ -100,8 +97,8 @@ Create a Inner VM inside a VM using the below commands:
         
  ## Assignment - 3
  
- Viswamithra - %eax=0x4FFFFFFC
- Sravani - %eax=0x4FFFFFFD
+ Viswamithra - %eax=0x4FFFFFFD.
+ Sravani - %eax=0x4FFFFFFC.
  
  
  The assignment files are committed to path linux/cmpe283/Assignment -3/
@@ -113,4 +110,44 @@ Create a Inner VM inside a VM using the below commands:
 5. Executed the commands with exit_number in the inner VM which is inside a VM.
         cpuid -l 0X4ffffffc -s exit_number
         cpuid -l 0X4ffffffd -s exit_number
+        
+
  
+ ## Questions
+3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there 
+more exits performed during certain VM operations? Approximately how many exits does a full VM 
+boot entail?
+
+Ans :- The frequency of exits is increasing at a stable rate. We have observed that VM boot for all the exits require up to ~6800000.
+
+
+4.Of the exit types defined in the SDM, which are the most frequent? Least?
+Most Frequent Exits:
+   1. Exit number 10- CPUID
+   2. Exit number 32 - WRMSR
+   3. Exit number 1- External Interrupt
+   4. Exit number 12- HLT
+Least Frequent Exits :
+   1. Exit number 54 - WBINVD or WBNOINVD
+   2. Exit number 55 -  XSETBV
+   3. Exit number 29 - MOV DR
+
+## Assignment -4 
+
+1. Execute the cpuid to get the number of exits for shadow paging.
+2. Boot the guest VM and, Record total exit count information.
+3. Shutdown the inner VM.
+4. Remove the ‘kvm-intel’ module from current kernel.
+5. Reload the kvm-intel module by giving ept=0 at the path.
+6. insmod /lib/modules/5.15.0+/kernel/arch/x86/kvm/kvm-intel.ko ept=0
+7. Reboot the VM, make a note of exits.
+
+
+Q. What did you learn from the count of exits? Was the count what you expected? If not, why not?
+
+When compared to nested paging, the number of exits in shadow paging increases. Nested paging eliminates the overheads associated with shadow paging. The hypervisor does not need to intercept and reproduce the visitor's modification of the guest page table, unlike shadow paging.
+
+
+
+Q. What changed between the two runs (ept vs no-ept)?
+The changes between the two runs with ept and without ept are the exit counts. The exit count has been increased with no-ept due to the overhead associated with shadow paging.
