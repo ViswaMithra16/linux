@@ -107,9 +107,7 @@ Create a Inner VM inside a VM using the below commands:
 2. Modified the code in vmx.c, cpuid.c to get the total time spent in processing and to get the 32 bits of exit processing in ecx and ebx.
 3. Install the nested virtual machine inside the virtual machine
 4. Now execute %eax=0x4FFFFFFC in the eax and this will return the total number of exits.
+5. Executed the commands with exit_number in the inner VM which is inside a VM.
+        cpuid -l 0X4ffffffc -s exit_number
+        cpuid -l 0X4ffffffd -s exit_number
  
-
-Output:
-● Executed the below commands in the inner VM which is inside a VM
-  cpuid -l 0X4ffffffc -s exit_number
-  cpuid -l 0X4ffffffd -s exit_number
