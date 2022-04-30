@@ -53,7 +53,7 @@ Sravani - %eax=0x4FFFFFFF
 ###### Let’s start with the first instruction 0x4FFFFFFF. Here we need to know the total exits of all types when the exit equals to 0x4FFFFFFF instruction. We can do this by incrementing it by 1 whenever the instructions equal the value, using an if condition. 
 
 The assignment files are committed to path linux/cmpe283/Assignment -2/
-1. Worked on the CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE
+1. Worked on the CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE both as we need to proceed further for other assignments.
 2. To get the total number of exits modified the code in cpuid.c file.
 3. Install the nested virtual machine inside the virtual machine
 4. Now execute %eax=0x4FFFFFFF in the eax and this will return the total number of exits.
@@ -88,9 +88,28 @@ Create a Inner VM inside a VM using the below commands:
 5. sudo apt install virt-manager
 6. sudo virt-manager
 7. Install ubuntu 20.4 iso image
-8. Installing CPUID package
-9. Download the CPUID deb package for AMD64 https://packages.ubuntu.com/bionic/admin/cpuid
-10. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb
-11. Executed the below command inside VM
+8. Download the CPUID deb package for AMD64.
+9. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb
+10. Executed the below command inside VM
         cpuid -l 0X4fffffff -s exit_number
         cpuid -l 0X4ffffffe -s exit_number
+        
+        
+ ## Assignment - 3
+ 
+ Viswamithra - %eax=0x4FFFFFFC
+ Sravani - %eax=0x4FFFFFFD
+ 
+ 
+ The assignment files are committed to path linux/cmpe283/Assignment -3/
+ 
+1. Worked on the CPUID leaf node %eax=0x4FFFFFFC and %eax=0x4FFFFFFD.
+2. Modified the code in vmx.c, cpuid.c to get the total time spent in processing and to get the 32 bits of exit processing in ecx and ebx.
+3. Install the nested virtual machine inside the virtual machine
+4. Now execute %eax=0x4FFFFFFC in the eax and this will return the total number of exits.
+ 
+
+Output:
+● Executed the below commands in the inner VM which is inside a VM
+  cpuid -l 0X4ffffffc -s exit_number
+  cpuid -l 0X4ffffffd -s exit_number
