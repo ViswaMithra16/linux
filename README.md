@@ -144,6 +144,9 @@ Least Frequent Exits :
 6. insmod /lib/modules/5.15.0+/kernel/arch/x86/kvm/kvm-intel.ko ept=0
 7. Reboot the VM, make a note of exits.
 
+<img width="275" alt="Assignment-3" src="https://user-images.githubusercontent.com/88958925/166087682-63446a9f-d98b-487b-9859-d375ebeba20b.png">
+
+
 
 Q. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 
