@@ -79,6 +79,8 @@ Installing Nested VM.
 
 ![Assignment-3_2](https://user-images.githubusercontent.com/88958925/166080474-dda0d5fd-40bb-4462-addf-37c5a9abf821.png)
 
+![fe_2_new](https://user-images.githubusercontent.com/88958925/166087632-d1a4da36-8395-44f7-9c92-70490c91f405.PNG)
+
 
 Create a Inner VM inside a VM using the below commands:
 1. sudo apt update
